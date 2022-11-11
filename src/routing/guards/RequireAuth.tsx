@@ -1,7 +1,7 @@
 import { Navigate, Outlet, useLocation } from 'react-router-dom';
-import { ERoles, IUser } from '../context-providers/auth/authContext';
-import { useAuth } from '../context-providers/auth/useAuth';
-import { ERoutes } from './routes.enum';
+import { ERoles, IUser } from '../../context-providers/auth/authContext';
+import { useAuth } from '../../context-providers/auth/useAuth';
+import { ERoutes } from '../routes.enum';
 
 interface IRequireAuthProps {
   allowedRoles: ERoles[];
@@ -15,8 +15,6 @@ export const hasAllowedRole = (user: IUser, allowedRoles: ERoles[]): boolean => 
 function RequireAuth({ allowedRoles }: IRequireAuthProps) {
   const auth = useAuth();
   const location = useLocation();
-
-  console.log('user', auth);
 
   if (!auth?.user)
     return <Navigate to={`/${ERoutes.PUBLIC_LOGIN}`} state={{ from: location }} replace />;

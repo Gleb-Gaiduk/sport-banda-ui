@@ -15,6 +15,7 @@ function AuthProvider({ children }: IAuthProviderProps) {
   const resetPassword = () => {};
 
   useEffect(() => {
+    // Temp solution for moccking a user
     const mockedUser = {
       id: '123',
       roles: [ERoles.USER],
