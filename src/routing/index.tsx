@@ -1,5 +1,5 @@
 import { createBrowserRouter, createRoutesFromElements, Route } from 'react-router-dom';
-import { AppLayout } from '../components/AppLayout/AppLayout';
+import { AppLayout } from '../components/organisms/AppLayout/AppLayout';
 import { ERoles } from '../context-providers/auth/authContext';
 import {
   EventPage,

@@ -1,6 +1,6 @@
 import { useLayoutEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
-import { createWrapperWithId } from '../../utils';
+import { createWrapperWithId } from '../../../utils';
 
 interface IPortalProps {
   children: React.ReactNode;
