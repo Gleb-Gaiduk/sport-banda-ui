@@ -5,7 +5,9 @@ import { router } from './routing';
 function App() {
   return (
     <AuthProvider>
-      <RouterProvider router={router} />
+      <div className='light-theme'>
+        <RouterProvider router={router} />
+      </div>
     </AuthProvider>
   );
 }

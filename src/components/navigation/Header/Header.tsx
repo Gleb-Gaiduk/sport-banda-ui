@@ -1,9 +1,10 @@
 import { Link } from 'react-router-dom';
 import { ERoutes } from '../../../routing/routes.enum';
+import './Header.scss';
 
 function Header() {
   return (
-    <header>
+    <header className='SbHeader'>
       HEADER COMPONENT
       <nav>
         <ul>

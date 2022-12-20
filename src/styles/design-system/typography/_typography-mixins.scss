@@ -1,0 +1,99 @@
+@use '../utils/utils-mixins';
+@use './_fonts';
+
+@mixin h1-typography {
+  @include utils-mixins.adaptiveValue('font-size', 56, 49);
+  @include utils-mixins.adaptiveValue('line-height', 72, 63);
+  letter-spacing: normal;
+  font-weight: fonts.select-font-weight(regular);
+  font-weight: fonts.$primary-font;
+}
+
+@mixin h2-typography {
+  @include utils-mixins.adaptiveValue('font-size', 45, 40);
+  @include utils-mixins.adaptiveValue('line-height', 56, 49);
+  letter-spacing: normal;
+  font-weight: fonts.select-font-weight(regular);
+  font-weight: fonts.$primary-font;
+}
+
+@mixin h3-typography {
+  @include utils-mixins.adaptiveValue('font-size', 28, 24.5);
+  @include utils-mixins.adaptiveValue('line-height', 40, 35);
+  letter-spacing: normal;
+  font-weight: fonts.select-font-weight(regular);
+  font-weight: fonts.$primary-font;
+}
+
+@mixin h4-typography {
+  @include utils-mixins.adaptiveValue('font-size', 26, 22.75);
+  @include utils-mixins.adaptiveValue('line-height', 32, 28);
+  letter-spacing: normal;
+  font-weight: fonts.select-font-weight(regular);
+  font-weight: fonts.$primary-font;
+}
+
+@mixin h5-typography {
+  @include utils-mixins.adaptiveValue('font-size', 22, 19.25);
+  @include utils-mixins.adaptiveValue('line-height', 32, 28);
+  letter-spacing: normal;
+  font-weight: map-get($fontWeightData, 'semiBold');
+  font-weight: fonts.$primary-font;
+}
+
+@mixin h6-typography {
+  @include utils-mixins.adaptiveValue('font-size', 20, 17.5);
+  @include utils-mixins.adaptiveValue('line-height', 28, 24.5);
+  letter-spacing: normal;
+  font-weight: map-get($fontWeightData, 'semiBold');
+  font-weight: fonts.$primary-font;
+}
+
+@mixin body-typography-md {
+  @include utils-mixins.adaptiveValue('font-size', 17, 15);
+  @include utils-mixins.adaptiveValue('line-height', 24, 21);
+  letter-spacing: normal;
+  font-weight: fonts.select-font-weight(regular);
+  font-weight: fonts.$primary-font;
+}
+
+@mixin body-typography-sm {
+  @include utils-mixins.adaptiveValue('font-size', 15, 14);
+  @include utils-mixins.adaptiveValue('line-height', 22, 20);
+  letter-spacing: normal;
+  font-weight: fonts.select-font-weight(regular);
+  font-weight: fonts.$primary-font;
+}
+
+@mixin subscript-typography-md {
+  font-size: toRem(14px);
+  line-height: 1.125rem;
+  letter-spacing: normal;
+  font-weight: fonts.select-font-weight(regular);
+  font-weight: fonts.$primary-font;
+}
+
+@mixin subscript-typography-sm {
+  font-size: toREM(13px);
+  line-height: 1rem;
+  letter-spacing: normal;
+  font-weight: fonts.select-font-weight(regular);
+  font-weight: fonts.$primary-font;
+}
+
+@mixin subscript-typography-xs {
+  font-size: toREM(11px);
+  letter-spacing: normal;
+  line-height: normal;
+  font-weight: fonts.select-font-weight(bold);
+  font-weight: fonts.$primary-font;
+}
+
+@mixin overline-typography {
+  @include utils-mixins.adaptiveValue('font-size', 16, 14);
+  @include utils-mixins.adaptiveValue('line-height', 27, 23);
+  text-transform: uppercase;
+  letter-spacing: 0.4;
+  ffont-weight: fonts.select-font-weight(light);
+  font-weight: fonts.$primary-font;
+}

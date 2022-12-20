@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Work+Sans:wght@500;700&display=swap');
+
+$theme-base-font-size: 16px;
+$default-browser-font-size: 16px;
+
+$primary-font: 'Libre Baskerville', serif;
+$secondary-font: 'Work Sans', sans-serif;
+
+$font-weight-data: (
+  bold: 700,
+  semi-bold: 500,
+  regular: 400,
+  light: 300,
+) !default;
+
+/// Returns font weight given weight property.
+///
+/// @param {String} $weight - Font weight.
+/// @return {Weight} The font weight value.
+
+@function select-font-weight($weight) {
+  $value: map-get($font-weight-data, $weight);
+
+  @if $value == null {
+    @error 'Font weight `#{$value}` not found. Available font weights: #{$font-weight-data}';
+  } @else {
+    @return $value;
+  }
+}
