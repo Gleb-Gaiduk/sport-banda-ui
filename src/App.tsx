@@ -1,13 +1,12 @@
 import { RouterProvider } from 'react-router-dom';
 import { AuthProvider } from './context-providers/auth/authProvider';
 import { router } from './routing';
+import 'antd/dist/reset.css';
 
 function App() {
   return (
     <AuthProvider>
-      <div className='light-theme'>
-        <RouterProvider router={router} />
-      </div>
+      <RouterProvider router={router} />
     </AuthProvider>
   );
 }

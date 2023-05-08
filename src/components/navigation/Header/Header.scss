@@ -1,7 +1,0 @@
-@use '../../../styles/design-system/colors/themes';
-
-@include themes.light-theme {
-  .SbHeader {
-    background-color: themes.select-color(background, brand-main);
-  }
-}

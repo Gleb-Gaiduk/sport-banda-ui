@@ -22,8 +22,8 @@ function AuthProvider({ children }: IAuthProviderProps) {
     };
     const tm = setTimeout(() => {
       setUser(mockedUser);
-      console.log('fired');
-    }, 3000);
+      console.log('Mocked user is fetched');
+    }, 2000);
     return () => clearTimeout(tm);
   }, []);
 
